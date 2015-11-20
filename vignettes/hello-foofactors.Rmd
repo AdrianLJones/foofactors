@@ -9,13 +9,18 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-Throwing stuff from the README in here!
+This is a package for [STAT545](http://stat545-ubc.github.io/index.html) a piece of homework to practise the ins and outs of package development.  I built a small dummy function to add to the package that was started by Jenny called `factor_mush`.  It helps take several levels of a factor and combines them, making a new level with a new name.
 
 ```{r}
 #install_github("STAT545/foofactors")
 library(foofactors)
 fbind(iris$Species[c(1, 51, 101)], PlantGrowth$group[c(1, 11, 21)])
 freq_out(iris$Species)
+
+#Here is factor_mush in use
+test <- as.factor(c("a", "b", "c","c", "b", "a", "a1", "b1", "c1"))
+factor_mush(test, c("a", "c"), "ac")
+
 ```
 
 Boilerplate content below ...
